@@ -8,10 +8,10 @@ import java.net.http.HttpResponse;
 
 public class ConsumoAPI {
 
-    public String obterDados(String url) throws IOException, InterruptedException {
+    public String obterDados(String endereco) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(url))
+                .uri(URI.create(endereco))
                 .build();
 
         HttpResponse<String> response = client
